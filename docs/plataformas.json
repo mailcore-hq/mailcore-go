@@ -1,0 +1,62 @@
+{
+  "data_utc": "2026-11-14T16:24:11.675089+00:00",
+  "resultado": "aprovado",
+  "go": "go1.27.4",
+  "compilador": "compile version go1.27.4",
+  "sistema_compilador": "linux",
+  "arquitetura_compilador": "amd64",
+  "imagem": "sha256:59e61311dc81c573ecfaf1bc2b1461a047c361085ae152cef67e2470f9315736",
+  "docker": true,
+  "interfaces_somente_loopback": true,
+  "cgo_habilitado": false,
+  "comando": [
+    "go",
+    "build",
+    "."
+  ],
+  "escopo": "compilacao_cruzada_nucleo_sem_execucao_nos_alvos",
+  "perfis": [
+    {
+      "sistema": "linux",
+      "arquitetura": "amd64",
+      "resultado": "aprovado",
+      "duracao_segundos": 9.431,
+      "executado_no_alvo": false
+    },
+    {
+      "sistema": "linux",
+      "arquitetura": "arm64",
+      "resultado": "aprovado",
+      "duracao_segundos": 9.749,
+      "executado_no_alvo": false
+    },
+    {
+      "sistema": "darwin",
+      "arquitetura": "amd64",
+      "resultado": "aprovado",
+      "duracao_segundos": 9.334,
+      "executado_no_alvo": false
+    },
+    {
+      "sistema": "darwin",
+      "arquitetura": "arm64",
+      "resultado": "aprovado",
+      "duracao_segundos": 9.559,
+      "executado_no_alvo": false
+    },
+    {
+      "sistema": "windows",
+      "arquitetura": "amd64",
+      "resultado": "aprovado",
+      "duracao_segundos": 9.429,
+      "executado_no_alvo": false
+    },
+    {
+      "sistema": "windows",
+      "arquitetura": "arm64",
+      "resultado": "aprovado",
+      "duracao_segundos": 9.463,
+      "executado_no_alvo": false
+    }
+  ]
+}

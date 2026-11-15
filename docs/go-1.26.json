@@ -1,0 +1,14 @@
+{
+  "data_utc": "2026-11-14T16:21:25.639128+00:00",
+  "go": "go1.26.11",
+  "imagem": "sha256:02eb5c0452466bd515eaf184ca01c1aa4af9926c3a1bbe0704eca3b356cdd619",
+  "resultado": "aprovado",
+  "testes_folha": 201,
+  "testes_incluindo_grupos": 211,
+  "pacotes_aprovados": 1,
+  "falhas": 0,
+  "ignorados": 0,
+  "detector_corridas": true,
+  "rede_externa": false,
+  "instalacao_host": false
+}

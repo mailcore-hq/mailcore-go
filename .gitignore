@@ -1,0 +1,8 @@
+/dist/
+/relatorios/
+*.test
+*.out
+*.log
+__pycache__/
+.env
+.env.*

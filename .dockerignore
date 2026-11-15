@@ -1,0 +1,7 @@
+.git
+dist
+relatorios
+.env
+.env.*
+**/__pycache__
+*.log
