@@ -4,34 +4,21 @@
 
 SDK Go da API Mailcore, com **151 operações**, cliente seguro para uso concorrente,
 cancelamento por contexto, downloads por callback e autenticação de webhooks.
-Versão `v0.1.0-alpha.1`, ainda sem publicação. O núcleo utiliza apenas a
-biblioteca padrão e requer **Go 1.26 ou superior**.
+Versão publicada **`v0.1.0-alpha.1`**. O núcleo utiliza apenas a biblioteca
+padrão e requer **Go 1.26 ou superior**.
 
-## Instalação local
+## Instalação
 
-Enquanto o módulo não for publicado, adicione no `go.mod` da aplicação:
-
-```go
-require github.com/mailcore-hq/mailcore-go v0.1.0-alpha.1
-
-replace github.com/mailcore-hq/mailcore-go => ../mailcore-go
-```
-
-O caminho é relativo ao módulo da aplicação. Execute `go mod tidy` depois de
-adicionar o import. O identificador `github.com/mailcore-hq/mailcore-go` corresponde ao repositório
-oficial do módulo; a instalação remota requer a publicação da tag de versão. Para instalar o artefato gerado, em vez de usar
-`replace`, execute na aplicação com o caminho absoluto do proxy local:
+Na aplicação consumidora:
 
 ```sh
-GOPROXY=file:///caminho/para/mailcore-go/dist/proxy GOSUMDB=off \
-  go get github.com/mailcore-hq/mailcore-go@v0.1.0-alpha.1
+go get github.com/mailcore-hq/mailcore-go@v0.1.0-alpha.1
 ```
 
-Esse comando usa apenas o módulo local, sem rede ou dependências externas.
-Confira o SHA-256 registrado em `dist/manifesto.json` antes de distribuir o ZIP.
-
-Docker é utilizado no desenvolvimento e nos ensaios; os usuários do SDK precisam
-apenas do ambiente Go de sua aplicação.
+O módulo está disponível pelo proxy público Go, com checksums autenticados pelo
+banco público `sum.golang.org`. Confira o [registro da publicação](docs/publicacao.md).
+Os usuários do SDK precisam apenas do ambiente Go de sua aplicação; Docker é
+utilizado no desenvolvimento e nos ensaios da biblioteca.
 
 ## Enviar um email
 
@@ -194,6 +181,30 @@ persistência do processamento. `OpcoesAssinatura` permite fixar o relógio de
 teste ou reduzir a janela.
 
 ## Desenvolvimento
+
+### Consumir o checkout local
+
+Para desenvolver com o checkout local, adicione no `go.mod` da aplicação:
+
+```go
+require github.com/mailcore-hq/mailcore-go v0.1.0-alpha.1
+
+replace github.com/mailcore-hq/mailcore-go => ../mailcore-go
+```
+
+O caminho é relativo ao módulo da aplicação. Execute `go mod tidy` depois de
+adicionar o import. Para instalar o artefato gerado, em vez de usar `replace`, execute na aplicação
+com o caminho absoluto do proxy local:
+
+```sh
+GOPROXY=file:///caminho/para/mailcore-go/dist/proxy GOSUMDB=off \
+  go get github.com/mailcore-hq/mailcore-go@v0.1.0-alpha.1
+```
+
+Esse comando usa apenas o módulo local, sem rede ou dependências externas.
+Confira o SHA-256 registrado em `dist/manifesto.json` antes de distribuir o ZIP.
+
+### Verificar a biblioteca
 
 No checkout do SDK:
 
